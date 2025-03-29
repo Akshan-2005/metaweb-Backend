@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "express": "^4.21.2",
     "http": "^0.0.1-security",
     "nodemon": "^3.1.9",
-    "resend": "^4.1.1"
+    "resend": "^4.1.1",
+    "write-excel-file": "^2.3.2",
+    "xlsx": "^0.18.5"
   }
 }
