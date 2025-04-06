@@ -14,7 +14,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.use(express.json());
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "*",
   methods: ["POST"],
   allowedHeaders: ["Content-Type"]
 }));
@@ -70,7 +70,7 @@ const sendEmail = async (firstName, lastName, comemail, email, phone, org, help,
     console.log("Admin Email sent successfully:", data);
 
     const customerResponse = await resend.emails.send({
-      from: "Born2Scale <contact@born2scale.com>",
+      from: "Born2Scale <noreply@born2scale.com>",
       to: [email],
       subject: "Thank you for contacting",
       html: `
